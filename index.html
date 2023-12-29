@@ -13,6 +13,9 @@
             rel="stylesheet"
         />
 
+        <!-- Phosphor icons -->
+        <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
         <!-- Tailwind -->
         <script src="https://cdn.tailwindcss.com"></script>
         <style type="text/tailwindcss">
@@ -58,7 +61,6 @@
                         sans: ["Inter", "sans-serif"],
                         serif: ["Playfair Display", "serif"],
                     },
-                    extend: {},
                 },
             };
         </script>
@@ -81,18 +83,18 @@
                     </ul>
 
                     <div class="md:hidden">
-                        <label for="menu" class="cursor-pointer h-10 w-10 rounded-full grid place-content-center has-[:checked]:bg-white transition-all">
+                        <label for="menu" class="cursor-pointer size-12 rounded-full grid place-content-center has-[:checked]:bg-white transition-all">
                             <input role="button" type="checkbox" id="menu" class="peer" title="Menu" placeholder="Menu" hidden />
-                            <i data-lucide="menu" class="peer-checked:hidden"></i>
-                            <i data-lucide="x" class="hidden peer-checked:inline-block"></i>
+                            <i class="ph-list ph-bold peer-checked:hidden text-2xl"></i>
+                            <i class="ph-x ph-bold hidden peer-checked:inline-block text-2xl"></i>
                             <div
-                                class="fixed top-24 bottom-2 inset-x-2 bg-white rounded-3xl p-8 z-20 opacity-0 pointer-events-none scale-0 peer-checked:pointer-events-auto peer-checked:scale-100 peer-checked:opacity-100 transition-all"
+                                class="fixed top-24 bottom-2 inset-x-2 bg-white rounded-3xl p-8 z-20 opacity-0 pointer-events-none scale-0 origin-top peer-checked:pointer-events-auto peer-checked:scale-100 peer-checked:opacity-100 transition-all"
                             >
                                 <div class="grid gap-2 font-medium uppercase">
-                                    <div><a class="w-full grid place-content-center hover:bg-indigo-100 rounded-lg h-10 px-4" href="/thanhlehiepca">Giờ Thánh Lễ</a></div>
-                                    <div><a class="w-full grid place-content-center hover:bg-indigo-100 rounded-lg h-10 px-4" href="/thuvienthanhca">Thư Viện Thánh Ca</a></div>
-                                    <div><a class="w-full grid place-content-center hover:bg-indigo-100 rounded-lg h-10 px-4" href="/tamtinh">Tâm Tình</a></div>
-                                    <div><a class="w-full grid place-content-center hover:bg-indigo-100 rounded-lg h-10 px-4" href="/tamtinh">Liên Hệ</a></div>
+                                    <div><a class="w-full grid content-center text-right hover:bg-indigo-100 rounded-lg h-12 px-4" href="/thanhlehiepca">Giờ Thánh Lễ</a></div>
+                                    <div><a class="w-full grid content-center text-right hover:bg-indigo-100 rounded-lg h-12 px-4" href="/thuvienthanhca">Thư Viện Thánh Ca</a></div>
+                                    <div><a class="w-full grid content-center text-right hover:bg-indigo-100 rounded-lg h-12 px-4" href="/tamtinh">Tâm Tình</a></div>
+                                    <div><a class="w-full grid content-center text-right hover:bg-indigo-100 rounded-lg h-12 px-4" href="/tamtinh">Liên Hệ</a></div>
                                 </div>
                             </div>
                         </label>
@@ -152,7 +154,9 @@
                             </svg>
                         </div>
 
-                        <a href="https://maps.app.goo.gl/NRZVGnyPpbdu38Zp9" target="_blank"
+                        <a
+                            href="https://maps.app.goo.gl/NRZVGnyPpbdu38Zp9"
+                            target="_blank"
                             class="relative flex flex-col justify-center max-lg:items-center gap-2 bg-white rounded-3xl max-xl:rounded-t-md max-lg:rounded-bl-3xl max-xl:rounded-bl-md xl:max-w-[20dvw] z-[1] p-6 sm:p-8"
                         >
                             <h3 class="text-2xl max-lg:text-xl font-bold leading-tight uppercase text-pretty">TU VIỆN <span class="inline-block">GIÁO XỨ</span> MAI KHÔI</h3>
@@ -230,19 +234,31 @@
                         <span>2023 Ca Đoàn Hiệp Ca</span>
                     </div>
 
-                    <ul class="flex items-center justify-end gap-1 text-xs">
-                        <li><a href="#" target="_blank" class="size-10 grid place-content-center rounded-full hover:bg-indigo-100"><span><i class="w-5" data-lucide="facebook"></i></span></a></li>
-                        <li><a href="#" target="_blank" class="size-10 grid place-content-center rounded-full hover:bg-indigo-100"><span><i class="w-5" data-lucide="instagram"></i></span></a></li>
-                        <li><a href="#" target="_blank" class="size-10 grid place-content-center rounded-full hover:bg-indigo-100"><span><i class="w-5" data-lucide="youtube"></i></span></a></li>
+                    <ul class="flex items-center justify-end gap-1 text-xl sm:text-2xl">
+                        <li>
+                            <a href="#" target="_blank" class="size-10 grid place-content-center rounded-full hover:bg-indigo-100"
+                                ><span><i class="block ph-facebook-logo ph-fill"></i></span
+                            ></a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" class="size-10 grid place-content-center rounded-full hover:bg-indigo-100"
+                                ><span><i class="block ph-instagram-logo ph-bold"></i></span
+                            ></a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" class="size-10 grid place-content-center rounded-full hover:bg-indigo-100"
+                                ><span><i class="block ph-youtube-logo ph-fill"></i></span
+                            ></a>
+                        </li>
                     </ul>
                 </div>
             </footer>
         </div>
 
         <!-- Icons library -->
-        <script src="https://unpkg.com/lucide@latest"></script>
+        <!-- <script src="https://unpkg.com/lucide@latest"></script>
         <script>
             lucide.createIcons();
-        </script>
+        </script> -->
     </body>
 </html>
