@@ -169,31 +169,23 @@
             </section>
 
             <!-- CALENDAR SECTION -->
-            <section class="container grid mx-auto">
+            <section class="w-full max-w-screen-lg inline-grid md:grid-cols-[auto_minmax(0,1fr)] gap-4 md:gap-6 mx-auto">
+                <div class="flex md:flex-col gap-4 max-md:items-baseline max-md:justify-between sticky top-24 bg-slate-100">
+                    <h2 class="text-2xl font-bold">Tuần này</h2>
+                    <div class="flex md:grid text-sm leading-none">
+                        <span>25/12/2023</span>
+                        <span>-</span>
+                        <span>31/12/2023</span>
+                    </div>
+                </div>
                 <div class="w-full max-w-screen-md grid md:grid-cols-2 gap-4 md:gap-6 mx-auto">
-                    <!-- <button class="group/card grid gap-4 bg-white rounded-3xl text-left p-6 sm:p-8">
-                        <div class="grid gap-1">
-                            <div class="flex gap-2 justify-between font-medium text-gray-800">
-                                <span>THỨ 4 - 03/01/2024</span>
-                                <span
-                                    class="inline-flex items-center text-xs uppercase font-semibold text-gray-500 border border-gray-300 rounded px-2 py-0.5">SẮp
-                                    tới</span>
-                            </div>
-                            <h3 class="font-bold text-xl">Thánh lễ ...</h3>
-                        </div>
-
-                        <div class="rounded-xl aspect-video overflow-hidden">
-                            <img src="../images/thanhle.jpg"
-                                class="group-hover/card:scale-105 object-cover size-full transition-all" alt="">
-                        </div>
-                    </button> -->
                     <a href="./thanhle-30-12-2023.html"
                         class="group/card grid gap-4 bg-white rounded-3xl text-left p-6 sm:p-8">
                         <div class="grid gap-1">
                             <div class="flex gap-2 justify-between font-medium text-indigo-800">
                                 <span>THỨ 7 - 30/12/2023</span>
                                 <span
-                                    class="inline-flex items-center text-xs uppercase font-semibold text-indigo-800 bg-indigo-100 rounded px-2 py-0.5">Hôm
+                                    class="inline-flex items-center justify-center text-center text-xs uppercase h-6 min-w-max font-semibold text-indigo-800 bg-indigo-100 rounded px-2 py-0.5">Hôm
                                     nay</span>
                             </div>
                             <h3 class="font-bold text-xl">Thánh lễ ...</h3>
@@ -204,12 +196,12 @@
                                 class="group-hover/card:scale-105 object-cover size-full transition-all" alt="">
                         </div>
                     </a>
-                    <a href="./thanhle-27-12-2023.html" class="group/card grid gap-4 bg-white rounded-3xl text-left p-6 sm:p-8">
+                    <a href="#" class="group/card grid gap-4 bg-white rounded-3xl text-left p-6 sm:p-8">
                         <div class="grid gap-1">
                             <div class="flex gap-2 justify-between font-medium text-gray-500">
                                 <span>THỨ 4 - 27/12/2023</span>
                                 <span
-                                    class="inline-flex items-center text-xs uppercase bg-gray-200 rounded px-2 py-0.5">Kết
+                                    class="inline-flex items-center justify-center text-center text-xs uppercase h-6 min-w-max bg-gray-200 rounded px-2 py-0.5">Kết
                                     thúc</span>
                             </div>
                             <h3 class="font-bold text-xl">Thánh lễ ...</h3>
@@ -220,6 +212,109 @@
                                 class="group-hover/card:scale-105 object-cover size-full transition-all" alt="">
                         </div>
                     </a>
+                </div>
+
+                <div class="flex md:flex-col gap-4 max-md:items-baseline max-md:justify-between sticky top-24 bg-slate-100">
+                    <h2 class="text-2xl font-bold">Tuần sau</h2>
+                    <div class="flex md:grid text-sm leading-none">
+                        <span>01/01/2024</span>
+                        <span>-</span>
+                        <span>07/01/2024</span>
+                    </div>
+                </div>
+                <div class="w-full max-w-screen-md grid md:grid-cols-2 gap-4 md:gap-6 mx-auto">
+                    <a href="#" class="group/card grid gap-4 bg-white rounded-3xl text-left p-6 sm:p-8">
+                        <div class="grid gap-1">
+                            <div class="flex gap-2 justify-between font-medium text-gray-800">
+                                <span>THỨ 4 - 03/01/2024</span>
+                                <span
+                                    class="inline-flex items-center justify-center text-center text-xs uppercase h-6 min-w-max font-semibold text-gray-500 border border-gray-300 rounded px-2 py-0.5">SẮp
+                                    tới</span>
+                            </div>
+                            <h3 class="font-bold text-xl">Thánh lễ ...</h3>
+                        </div>
+
+                        <div class="rounded-xl aspect-video overflow-hidden">
+                            <img src="../images/thanhle.jpg"
+                                class="group-hover/card:scale-105 object-cover size-full transition-all" alt="">
+                        </div>
+                    </a>
+                </div>
+
+                <div class="flex md:flex-col gap-4 max-md:items-baseline max-md:justify-between sticky top-24 bg-slate-100">
+                    <h2 class="text-2xl font-bold">Tuần trước</h2>
+                </div>
+                <div class="w-full max-w-screen-md grid md:grid-cols-2 gap-4 md:gap-6 mx-auto">
+                    <a href="#" class="group/card grid gap-4 bg-white rounded-3xl text-left p-6 sm:p-8">
+                        <div class="grid gap-1">
+                            <div class="flex gap-2 justify-between font-medium text-gray-500">
+                                <span>THỨ 4 - 27/12/2023</span>
+                                <span
+                                    class="inline-flex items-center justify-center text-center text-xs uppercase h-6 min-w-max bg-gray-200 rounded px-2 py-0.5">Kết
+                                    thúc</span>
+                            </div>
+                            <h3 class="font-bold text-xl">Thánh lễ ...</h3>
+                        </div>
+
+                        <div class="rounded-xl aspect-video overflow-hidden">
+                            <img src="../images/thanhle.jpg"
+                                class="group-hover/card:scale-105 object-cover size-full transition-all" alt="">
+                        </div>
+                    </a>
+                    <a href="#" class="group/card grid gap-4 bg-white rounded-3xl text-left p-6 sm:p-8">
+                        <div class="grid gap-1">
+                            <div class="flex gap-2 justify-between font-medium text-gray-500">
+                                <span>THỨ 4 - 27/12/2023</span>
+                                <span
+                                    class="inline-flex items-center justify-center text-center text-xs uppercase h-6 min-w-max bg-gray-200 rounded px-2 py-0.5">Kết
+                                    thúc</span>
+                            </div>
+                            <h3 class="font-bold text-xl">Thánh lễ ...</h3>
+                        </div>
+
+                        <div class="rounded-xl aspect-video overflow-hidden">
+                            <img src="../images/thanhle.jpg"
+                                class="group-hover/card:scale-105 object-cover size-full transition-all" alt="">
+                        </div>
+                    </a>
+                    <a href="#" class="group/card grid gap-4 bg-white rounded-3xl text-left p-6 sm:p-8">
+                        <div class="grid gap-1">
+                            <div class="flex gap-2 justify-between font-medium text-gray-500">
+                                <span>THỨ 4 - 27/12/2023</span>
+                                <span
+                                    class="inline-flex items-center justify-center text-center text-xs uppercase h-6 min-w-max bg-gray-200 rounded px-2 py-0.5">Kết
+                                    thúc</span>
+                            </div>
+                            <h3 class="font-bold text-xl">Thánh lễ ...</h3>
+                        </div>
+
+                        <div class="rounded-xl aspect-video overflow-hidden">
+                            <img src="../images/thanhle.jpg"
+                                class="group-hover/card:scale-105 object-cover size-full transition-all" alt="">
+                        </div>
+                    </a>
+                    <a href="#" class="group/card grid gap-4 bg-white rounded-3xl text-left p-6 sm:p-8">
+                        <div class="grid gap-1">
+                            <div class="flex gap-2 justify-between font-medium text-gray-500">
+                                <span>THỨ 4 - 27/12/2023</span>
+                                <span
+                                    class="inline-flex items-center justify-center text-center text-xs uppercase h-6 min-w-max bg-gray-200 rounded px-2 py-0.5">Kết
+                                    thúc</span>
+                            </div>
+                            <h3 class="font-bold text-xl">Thánh lễ ...</h3>
+                        </div>
+
+                        <div class="rounded-xl aspect-video overflow-hidden">
+                            <img src="../images/thanhle.jpg"
+                                class="group-hover/card:scale-105 object-cover size-full transition-all" alt="">
+                        </div>
+                    </a>
+
+                    <div class="col-span-full flex justify-center">
+                        <button
+                            class="hover:text-indigo-800 font-medium rounded-lg bg-white inline-flex items-center px-4 py-2">Xem
+                            thêm...</button>
+                    </div>
                 </div>
             </section>
         </main>
