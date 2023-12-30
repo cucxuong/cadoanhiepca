@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Home - Ca Đoàn Hiệp Ca</title>
+
+        <!-- Google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Phosphor icons -->
+        <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+        <!-- Tailwind -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <style type="text/tailwindcss">
+            @layer base {
+                html,
+                body {
+                    @apply font-sans text-gray-800 bg-slate-100;
+                }
+                h1,
+                h2,
+                h3,
+                h4,
+                h5,
+                h6,
+                .h1,
+                .h2,
+                .h3,
+                .h4,
+                .h5,
+                .h6 {
+                    @apply font-serif;
+                }
+                a {
+                    @apply font-medium hover:text-indigo-800;
+                }
+            }
+            @layer components {
+                .clip-gap-sm {
+                    --clip-gap: 1rem;
+                }
+                .clip-gap {
+                    --clip-gap: 1.5rem;
+                }
+                .clip-gap-lg {
+                    --clip-gap: 2rem;
+                }
+            }
+        </style>
+        <script>
+            tailwind.config = {
+                theme: {
+                    fontFamily: {
+                        sans: ["Inter", "sans-serif"],
+                        serif: ["Playfair Display", "serif"],
+                    },
+                },
+            };
+        </script>
+    </head>
+
+    <body>
+        <div class="page-layout grid grid-rows-[auto_minmax(0,1fr)_auto] min-h-screen px-6 sm:px-8">
+            <header class="bg-slate-100 sticky top-0 z-10">
+                <div class="container flex items-center justify-between h-24 mx-auto py-4">
+                    <!-- LOGO -->
+                    <h1 class="flex items-center gap-2 text-lg font-bold leading-tight font-serif uppercase text-indigo-800">
+                        <span class="text-[2.5em]">✝</span>
+                        <span>Ca Đoàn<br />Hiệp Ca</span>
+                    </h1>
+                    <ul class="inline-flex gap-2 font-medium uppercase max-md:hidden">
+                        <li><a class="w-full grid place-content-center hover:bg-indigo-100 rounded-lg h-10 px-4" href="../index.html">Trang Chủ</a></li>
+                        <li><a class="w-full grid place-content-center hover:bg-indigo-100 rounded-lg h-10 px-4" href="../thanhlehiepca/index.html">Giờ Thánh Lễ</a></li>
+                        <li><a class="w-full grid place-content-center hover:bg-indigo-100 rounded-lg h-10 px-4" href="../thuvienthanhca/index.html">Thư Viện Thánh Ca</a></li>
+                        <li><a class="w-full grid place-content-center hover:bg-indigo-100 rounded-lg h-10 px-4" href="../tamtinh/index.html">Tâm Tình</a></li>
+                        <li><a class="w-full grid place-content-center hover:bg-indigo-100 rounded-lg h-10 px-4" href="../lienhe/index.html">Liên Hệ</a></li>
+                    </ul>
+
+                    <div class="md:hidden">
+                        <label for="menu" class="cursor-pointer size-12 rounded-full grid place-content-center has-[:checked]:bg-white transition-all">
+                            <input role="button" type="checkbox" id="menu" class="peer" title="Menu" placeholder="Menu" hidden />
+                            <i class="ph-list ph-bold peer-checked:hidden text-2xl"></i>
+                            <i class="ph-x ph-bold hidden peer-checked:inline-block text-2xl"></i>
+                            <div
+                                class="fixed top-24 bottom-2 inset-x-2 bg-white rounded-3xl p-8 z-20 opacity-0 pointer-events-none scale-0 origin-top peer-checked:pointer-events-auto peer-checked:scale-100 peer-checked:opacity-100 transition-all"
+                            >
+                                <div class="grid gap-2 font-medium uppercase">
+                                    <div><a class="w-full grid content-center text-right hover:bg-indigo-100 rounded-lg h-12 px-4" href="../thanhlehiepca/index.html">Giờ Thánh Lễ</a></div>
+                                    <div><a class="w-full grid content-center text-right hover:bg-indigo-100 rounded-lg h-12 px-4" href="../thuvienthanhca/index.html">Thư Viện Thánh Ca</a></div>
+                                    <div><a class="w-full grid content-center text-right hover:bg-indigo-100 rounded-lg h-12 px-4" href="../tamtinh/index.html">Tâm Tình</a></div>
+                                    <div><a class="w-full grid content-center text-right hover:bg-indigo-100 rounded-lg h-12 px-4" href="../lienhe/index.html">Liên Hệ</a></div>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </header>
+
+            <main class="grid gap-6 sm:gap-8 py-6 sm:py-8">
+                <!-- HERO SECTION -->
+                <div class="container relative grid lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] gap-1 clip-gap max-xl:clip-gap-sm mx-auto">
+                    <section class="order-2 lg:order-1 col-span-full grid h-[min(560px,50dvmax)] px-[calc(var(--clip-gap)_*_4)] max-xl:px-0">
+                        <div class="overflow-hidden rounded-md lg:rounded-t-3xl xl:rounded-3xl">
+                            <img src="../images/thanhle.jpg" alt="" class="object-cover object-[90%] lg:object-left w-screen max-lg:h-full" />
+                        </div>
+                    </section>
+
+                    <section class="order-1 lg:order-2 xl:absolute top-0 left-0 grid bg-slate-100 xl:rounded-br-[calc(var(--clip-gap)_+_1.5rem)] xl:pr-[var(--clip-gap)] xl:pb-[var(--clip-gap)]">
+                        <div class="max-xl:hidden absolute -right-[calc(var(--clip-gap)_*_1.25)] top-0 text-slate-100 z-0">
+                            <svg width="72" height="48" class="w-[calc(var(--clip-gap)_*_1.25_*_3)] h-auto" viewBox="0 0 72 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M72 0H0V48H48V24C48 10.7452 58.7452 0 72 0Z" fill="currentColor" />
+                            </svg>
+                        </div>
+                        <div class="max-xl:hidden absolute -bottom-[calc(var(--clip-gap)_*_1.25)] max-xl:left-0 left-[calc(var(--clip-gap)_*_4)] text-slate-100 z-0">
+                            <svg width="48" height="72" class="h-[calc(var(--clip-gap)_*_1.25_*_3)] w-auto" viewBox="0 0 48 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.14722e-06 72L0 0L48 -2.09815e-06L48 48L24 48C10.7452 48 2.56783e-06 58.7452 3.14722e-06 72Z" fill="currentColor" />
+                            </svg>
+                        </div>
+
+                        <div
+                            class="relative flex flex-col items-center justify-center gap-2 sm:gap-4 bg-white rounded-md max-lg:rounded-t-3xl lg:rounded-bl-3xl xl:rounded-3xl xl:max-w-[40dvw] z-[1] px-6 sm:p-8 max-lg:py-4"
+                        >
+                            <!-- HEADLINE -->
+                            <h2 class="xl:text-5xl text-3xl font-bold leading-tight uppercase">SUY NIỆM</h2>
+
+                            <!-- SLOGAN -->
+                            <div class="grid">
+                                <span class="font-serif xl:text-5xl text-3xl -mb-4">❝</span>
+                                <p class="text-center text-balance xl:text-lg">
+                                    Hãy dành cho nhau trong tình yêu. <br />
+                                    Hãy tôn trọng lẫn nhau trên chính bản thân mình
+                                </p>
+                                <span class="font-serif xl:text-5xl text-3xl text-right -mt-2">❞</span>
+                                <span class="italic text-right text-gray-500 max-xl:text-sm"> - Roma 12:10 </span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="order-3 xl:absolute bottom-0 right-0 grid bg-slate-100 xl:rounded-tl-[calc(var(--clip-gap)_+_1.5rem)] xl:pl-[var(--clip-gap)] xl:pt-[var(--clip-gap)]">
+                        <div class="max-xl:hidden absolute -left-[calc(var(--clip-gap)_*_1.25)] bottom-0 text-slate-100 z-0">
+                            <svg width="72" height="48" class="w-[calc(var(--clip-gap)_*_1.25_*_3)] h-auto rotate-180" viewBox="0 0 72 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M72 0H0V48H48V24C48 10.7452 58.7452 0 72 0Z" fill="currentColor" />
+                            </svg>
+                        </div>
+                        <div class="max-xl:hidden absolute -top-[calc(var(--clip-gap)_*_1.25)] max-xl:right-0 right-[calc(var(--clip-gap)_*_4)] text-slate-100 z-0">
+                            <svg width="48" height="72" class="h-[calc(var(--clip-gap)_*_1.25_*_3)] w-auto rotate-180" viewBox="0 0 48 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.14722e-06 72L0 0L48 -2.09815e-06L48 48L24 48C10.7452 48 2.56783e-06 58.7452 3.14722e-06 72Z" fill="currentColor" />
+                            </svg>
+                        </div>
+
+                        <a
+                            href="https://maps.app.goo.gl/NRZVGnyPpbdu38Zp9"
+                            target="_blank"
+                            class="relative flex flex-col justify-center max-lg:items-center gap-2 bg-white rounded-3xl max-xl:rounded-t-md max-lg:rounded-bl-3xl max-xl:rounded-bl-md xl:max-w-[20dvw] z-[1] p-6 sm:p-8"
+                        >
+                            <h3 class="text-2xl max-lg:text-xl font-bold leading-tight uppercase text-pretty">TU VIỆN <span class="inline-block">GIÁO XỨ</span> MAI KHÔI</h3>
+
+                            <p class="max-xl:text-sm text-balance">44 Tú Xương, Quận 3, TP.HCM</p>
+                        </a>
+                    </section>
+                </div>
+
+                <!-- PAGE NAVIGATION -->
+                <div class="container grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mx-auto">
+                    <a href="./thanhlehiepca/index.html" class="group/card flex flex-col gap-4 bg-white rounded-3xl p-6 sm:p-8">
+                        <div class="card-header grid">
+                            <span class="text-xs uppercase text-gray-500">Ca Đoàn Hiệp Ca</span>
+                            <h3 class="text-2xl font-semibold capitalize">Giờ Thánh Lễ</h3>
+                        </div>
+
+                        <div class="aspect-video rounded-2xl overflow-hidden">
+                            <img src="./images/thanhle.jpg" class="object-cover w-full h-full group-hover/card:scale-105 transition-all" alt="" />
+                        </div>
+
+                        <p class="font-normal text-gray-800 text-pretty">Chúng tôi phụng vụ hát lễ mỗi chiều <span class="uppercase">Thứ 4</span> và <span class="uppercase">Thứ 7</span> hàng tuần</p>
+                        <span>THÁNH LỄ 17:30</span>
+                    </a>
+                    <a href="./thuvienthanhca/index.html" class="group/card flex flex-col gap-4 bg-white rounded-3xl p-6 sm:p-8">
+                        <div class="card-header grid">
+                            <span class="text-xs uppercase text-gray-500">Thư viện Hiệp Ca</span>
+                            <h3 class="text-2xl font-semibold capitalize">Các Bài Thánh Lễ</h3>
+                        </div>
+
+                        <div class="aspect-video rounded-2xl overflow-hidden">
+                            <img src="./images/thanhca.jpg" class="object-cover w-full h-full group-hover/card:scale-105 transition-all" alt="" />
+                        </div>
+
+                        <p class="font-normal text-gray-800 text-pretty">Chúng tôi sử dụng các bài nhạc thánh này phụng vụ Thánh Lễ</p>
+                    </a>
+                    <a href="./tamtinh/index.html" class="group/card flex flex-col gap-4 bg-white rounded-3xl p-6 sm:p-8">
+                        <div class="card-header grid">
+                            <span class="text-xs uppercase text-gray-500">Tâm tình Hiệp Ca</span>
+                            <h3 class="text-2xl font-semibold capitalize">Chia Sẻ</h3>
+                        </div>
+
+                        <div class="aspect-video rounded-2xl overflow-hidden">
+                            <img src="./images/tamtinh.jpg" class="object-cover w-full h-full group-hover/card:scale-105 transition-all" alt="" />
+                        </div>
+
+                        <p class="font-normal text-gray-800 text-pretty">Mt5.5: "Phúc thay ai sầu khổ, vì họ sẽ được Thiên Chúa ủi an"</p>
+                    </a>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>
