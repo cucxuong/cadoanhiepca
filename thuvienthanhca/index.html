@@ -72,7 +72,7 @@
 
 <body>
     <div class="page-layout">
-        <header class="relative md:sticky top-0 z-10 -mx-6 sm:-mx-8">
+        <header class="relative md:sticky top-0 z-10 -mx-6 sm:-mx-8 px-6 sm:px-8">
             <div class="absolute inset-0 bg-slate-100 bg-opacity-90 backdrop-blur-lg z-[-1]"></div>
             <div class="container flex items-center justify-between h-24 mx-auto py-4">
                 <!-- LOGO -->
@@ -124,13 +124,12 @@
                     </div>
 
                     <div
-                        class="relative flex flex-col items-center justify-center gap-2 sm:gap-4 bg-white rounded-md max-md:rounded-t-3xl md:rounded-l-3xl lg:rounded-3xl lg:max-w-[30dvw] z-[1] px-6 sm:p-8 max-md:py-4">
+                        class="relative flex flex-col items-center justify-center gap-2 sm:gap-4 bg-white text-balance text-center rounded-md max-md:rounded-t-3xl md:rounded-l-3xl lg:rounded-3xl lg:max-w-[30dvw] z-[1] px-6 sm:p-8 max-md:py-4">
                         <!-- HEADLINE -->
                         <h2 class="xl:text-4xl text-3xl font-bold leading-tight uppercase">Các Bài Thánh Ca</h2>
 
                         <!-- INTRO -->
                         <div class="grid gap-2">
-                            <p class="text-center text-balance xl:text-lg">
                             <p class="text-center text-balance xl:text-lg">
                                 Chúng tôi sử dụng các bài nhạc thánh này phụng vụ Thánh Lễ
                             </p>
@@ -149,93 +148,94 @@
             <section class="container flex max-md:flex-col gap-4 md:gap-6 mx-auto">
                 <!-- CATEGORIES -->
                 <div
-                    class="order-1 md:order-2 flex flex-col gap-4 max-md:items-baseline max-md:justify-between sticky top-0 md:top-24 py-2 -mb-2 bg-slate-100 bg-opacity-90 backdrop-blur">
+                    class="order-1 md:order-2 grid grid-cols-1 md:flex md:flex-col gap-4 max-md:items-baseline max-md:justify-between py-2 -mb-2 bg-slate-100 bg-opacity-90 backdrop-blur">
                     <h2 class="text-xl font-bold md:pl-7">Chủ đề</h2>
                     <div
                         class="flex md:grid gap-2 md:gap-1 overflow-x-auto snap-x snap-mandatory *:snap-start *:min-w-max *:inline-flex *:items-center *:justify-start *:gap-1 *:h-8 *:rounded-md *:max-md:bg-white *:text-sm *:select-none *:px-2">
                         <label class="has-[:checked]:max-md:!bg-blue-100 has-[:checked]:!text-blue-700">
                             <input type="checkbox" checked hidden class="peer">
                             <i
-                                class="text-base ph-check-fat ph-fill opacity-0 peer-checked:opacity-100 transition-all"></i>
+                                class="text-base ph-check-fat ph-fill opacity-0 peer-checked:opacity-100 transition-all max-md:hidden"></i>
                             Tất cả
                         </label>
                         <label class="has-[:checked]:max-md:!bg-blue-100  has-[:checked]:!text-blue-700">
                             <input type="checkbox" hidden class="peer">
                             <i
-                                class="text-base ph-check-fat ph-fill opacity-0 peer-checked:opacity-100 transition-all"></i>
+                                class="text-base ph-check-fat ph-fill opacity-0 peer-checked:opacity-100 transition-all max-md:hidden"></i>
                             Đức Mẹ
                         </label>
                         <label class="has-[:checked]:max-md:!bg-blue-100  has-[:checked]:!text-blue-700">
                             <input type="checkbox" hidden class="peer">
                             <i
-                                class="text-base ph-check-fat ph-fill opacity-0 peer-checked:opacity-100 transition-all"></i>
+                                class="text-base ph-check-fat ph-fill opacity-0 peer-checked:opacity-100 transition-all max-md:hidden"></i>
                             Nhập Lễ
                         </label>
                         <label class="has-[:checked]:max-md:!bg-blue-100  has-[:checked]:!text-blue-700">
                             <input type="checkbox" hidden class="peer">
                             <i
-                                class="text-base ph-check-fat ph-fill opacity-0 peer-checked:opacity-100 transition-all"></i>
+                                class="text-base ph-check-fat ph-fill opacity-0 peer-checked:opacity-100 transition-all max-md:hidden"></i>
                             Đáp Ca, Thánh Vịnh
                         </label>
                         <label class="has-[:checked]:max-md:!bg-blue-100  has-[:checked]:!text-blue-700">
                             <input type="checkbox" hidden class="peer">
                             <i
-                                class="text-base ph-check-fat ph-fill opacity-0 peer-checked:opacity-100 transition-all"></i>
+                                class="text-base ph-check-fat ph-fill opacity-0 peer-checked:opacity-100 transition-all max-md:hidden"></i>
                             Halleluia
                         </label>
                         <label class="has-[:checked]:max-md:!bg-blue-100  has-[:checked]:!text-blue-700">
                             <input type="checkbox" hidden class="peer">
                             <i
-                                class="text-base ph-check-fat ph-fill opacity-0 peer-checked:opacity-100 transition-all"></i>
+                                class="text-base ph-check-fat ph-fill opacity-0 peer-checked:opacity-100 transition-all max-md:hidden"></i>
                             Dâng Lễ
                         </label>
                         <label class="has-[:checked]:max-md:!bg-blue-100  has-[:checked]:!text-blue-700">
                             <input type="checkbox" hidden class="peer">
                             <i
-                                class="text-base ph-check-fat ph-fill opacity-0 peer-checked:opacity-100 transition-all"></i>
+                                class="text-base ph-check-fat ph-fill opacity-0 peer-checked:opacity-100 transition-all max-md:hidden"></i>
                             Hiệp Lễ
                         </label>
                         <label class="has-[:checked]:max-md:!bg-blue-100  has-[:checked]:!text-blue-700">
                             <input type="checkbox" hidden class="peer">
                             <i
-                                class="text-base ph-check-fat ph-fill opacity-0 peer-checked:opacity-100 transition-all"></i>
+                                class="text-base ph-check-fat ph-fill opacity-0 peer-checked:opacity-100 transition-all max-md:hidden"></i>
                             Kết Lễ
                         </label>
                         <label class="has-[:checked]:max-md:!bg-blue-100  has-[:checked]:!text-blue-700">
                             <input type="checkbox" hidden class="peer">
                             <i
-                                class="text-base ph-check-fat ph-fill opacity-0 peer-checked:opacity-100 transition-all"></i>
+                                class="text-base ph-check-fat ph-fill opacity-0 peer-checked:opacity-100 transition-all max-md:hidden"></i>
                             Bài hát cầu cho các linh hồn
                         </label>
-                        <label class="has-[:checked]:!bg-blue-100  has-[:checked]:!text-blue-700">
+                        <label class="has-[:checked]:max-md:!bg-blue-100  has-[:checked]:!text-blue-700">
                             <input type="checkbox" hidden class="peer">
                             <i
-                                class="text-base ph-check-fat ph-fill opacity-0 peer-checked:opacity-100 transition-all"></i>
+                                class="text-base ph-check-fat ph-fill opacity-0 peer-checked:opacity-100 transition-all max-md:hidden"></i>
                             Lễ Cưới, Lễ Giỗ
                         </label>
-                        <label class="has-[:checked]:!bg-blue-100  has-[:checked]:!text-blue-700">
+                        <label class="has-[:checked]:max-md:!bg-blue-100  has-[:checked]:!text-blue-700">
                             <input type="checkbox" hidden class="peer">
                             <i
-                                class="text-base ph-check-fat ph-fill opacity-0 peer-checked:opacity-100 transition-all"></i>
+                                class="text-base ph-check-fat ph-fill opacity-0 peer-checked:opacity-100 transition-all max-md:hidden"></i>
                             Lễ các Thánh
                         </label>
-                        <label class="has-[:checked]:!bg-blue-100  has-[:checked]:!text-blue-700">
+                        <label class="has-[:checked]:max-md:!bg-blue-100  has-[:checked]:!text-blue-700">
                             <input type="checkbox" hidden class="peer">
                             <i
-                                class="text-base ph-check-fat ph-fill opacity-0 peer-checked:opacity-100 transition-all"></i>
+                                class="text-base ph-check-fat ph-fill opacity-0 peer-checked:opacity-100 transition-all max-md:hidden"></i>
                             Rửa tội, Thêm sức
                         </label>
-                        <label class="has-[:checked]:!bg-blue-100  has-[:checked]:!text-blue-700">
+                        <label class="has-[:checked]:max-md:!bg-blue-100  has-[:checked]:!text-blue-700">
                             <input type="checkbox" hidden class="peer">
                             <i
-                                class="text-base ph-check-fat ph-fill opacity-0 peer-checked:opacity-100 transition-all"></i>
+                                class="text-base ph-check-fat ph-fill opacity-0 peer-checked:opacity-100 transition-all max-md:hidden"></i>
                             Tuyển tập Hiệp Ca
                         </label>
                     </div>
                 </div>
 
                 <!-- LIST -->
-                <div class="order-2 md:order-1 w-full grid md:grid-cols-2 2xl:grid-cols-3 content-start gap-4 md:gap-6">
+                <div
+                    class="order-2 md:order-1 w-full grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 content-start gap-4 md:gap-6">
                     <div class="grid gap-4 bg-white bg-opacity-90 backdrop-blur rounded-3xl text-left p-6 sm:p-8">
                         <div class="grid grid-cols-[minmax(0,1fr)_auto] content-center gap-2">
                             <div class="grid gap-2">
