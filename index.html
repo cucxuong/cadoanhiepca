@@ -39,7 +39,7 @@
                     @apply font-serif;
                 }
                 a {
-                    @apply font-medium hover:text-indigo-800;
+                    @apply font-medium hover:text-blue-700;
                 }
             }
             @layer components {
@@ -53,7 +53,7 @@
                     --clip-gap: 2rem;
                 }
                 .page-layout{
-                    @apply grid min-h-screen px-6 sm:px-8;
+                    @apply grid min-h-screen px-6 sm:px-8 max-md:mb-16;
                     grid-template-rows: auto minmax(0,1fr) auto;
                 }
             }
@@ -72,51 +72,32 @@
 
 <body>
     <div class="page-layout">
-        <header class="bg-slate-100 bg-opacity-90 backdrop-blur-lg sticky top-0 z-10">
+        <header class="relative md:sticky top-0 z-10 -mx-6 sm:-mx-8">
+            <div class="absolute inset-0 bg-slate-100 bg-opacity-90 backdrop-blur-lg z-[-1]"></div>
             <div class="container flex items-center justify-between h-24 mx-auto py-4">
                 <!-- LOGO -->
-                <h1
-                    class="flex items-center gap-2 text-lg font-bold leading-tight font-serif uppercase text-indigo-800">
-                    <span class="text-[2.5em]">✝</span>
+                <a href="./index.html"
+                    class="flex items-center gap-2 text-lg font-bold leading-tight font-serif uppercase text-blue-700 max-md:mx-auto">
+                    <span class="text-[1.75em]">
+                        <svg class="h-[1em] w-auto" width="200" height="280" viewBox="0 0 200 280" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M120 0H80V70H0V110H80V280H120V110H200V70H120V0Z" fill="currentColor" />
+                        </svg>
+                    </span>
                     <span>Ca Đoàn<br />Hiệp Ca</span>
-                </h1>
-                <ul class="inline-flex gap-2 font-medium uppercase max-md:hidden">
-                    <li><a class="w-full grid place-content-center hover:bg-indigo-100 rounded-lg h-10 px-4"
-                            href="./thanhlehiepca/index.html">Giờ Thánh Lễ</a></li>
-                    <li><a class="w-full grid place-content-center hover:bg-indigo-100 rounded-lg h-10 px-4"
-                            href="./thuvienthanhca/index.html">Thư Viện Thánh Ca</a></li>
-                    <li><a class="w-full grid place-content-center hover:bg-indigo-100 rounded-lg h-10 px-4"
-                            href="./tamtinh/index.html">Tâm Tình</a></li>
-                    <li><a class="w-full grid place-content-center hover:bg-indigo-100 rounded-lg h-10 px-4"
-                            href="./lienhe/index.html">Liên Hệ</a></li>
-                </ul>
-
-                <div class="md:hidden">
-                    <label for="menu"
-                        class="cursor-pointer size-12 rounded-full grid place-content-center has-[:checked]:bg-white transition-all">
-                        <input role="button" type="checkbox" id="menu" class="peer" title="Menu" placeholder="Menu"
-                            hidden />
-                        <i class="ph-list ph-bold peer-checked:hidden text-2xl"></i>
-                        <i class="ph-x ph-bold hidden peer-checked:inline-block text-2xl"></i>
-                        <div
-                            class="fixed top-24 bottom-2 inset-x-2 bg-white rounded-3xl p-8 z-20 opacity-0 pointer-events-none scale-0 origin-top peer-checked:pointer-events-auto peer-checked:scale-100 peer-checked:opacity-100 transition-all">
-                            <div class="grid gap-2 font-medium uppercase">
-                                <div><a class="w-full grid content-center text-right hover:bg-indigo-100 rounded-lg h-12 px-4"
-                                        href="./thanhlehiepca/index.html">Giờ Thánh Lễ</a></div>
-                                <div><a class="w-full grid content-center text-right hover:bg-indigo-100 rounded-lg h-12 px-4"
-                                        href="./thuvienthanhca/index.html">Thư Viện Thánh Ca</a></div>
-                                <div><a class="w-full grid content-center text-right hover:bg-indigo-100 rounded-lg h-12 px-4"
-                                        href="./tamtinh/index.html">Tâm Tình</a></div>
-                                <div><a class="w-full grid content-center text-right hover:bg-indigo-100 rounded-lg h-12 px-4"
-                                        href="./lienhe/index.html">Liên Hệ</a></div>
-                            </div>
-                        </div>
-                    </label>
+                </a>
+                <div
+                    class="inline-flex gap-2 font-medium uppercase text-xs lg:text-sm xl:text-base max-md:fixed max-md:bottom-0 max-md:inset-x-0 max-md:border-t max-md:bg-white max-md:bg-opacity-90 max-md:backdrop-blur-lg max-md:h-20 *:max-md:text-center *:grid *:place-content-center *:rounded-lg *:h-12 *:border-y-2 *:border-transparent *:py-2 *:px-4 *:transition-all">
+                    <a href="./thanhlehiepca/index.html" class="hover:bg-blue-100">Giờ Thánh Lễ</a>
+                    <a href="./thuvienthanhca/index.html" class="hover:bg-blue-100">Thư Viện Thánh Ca</a>
+                    <a href="./tamtinh/index.html" class="hover:bg-blue-100">Tâm Tình</a>
+                    <a href="./lienhe/index.html" class="hover:bg-blue-100">Liên Hệ</a>
                 </div>
             </div>
         </header>
 
-        <main class="grid gap-6 sm:gap-8 py-6 sm:py-8">
+        <main class="grid gap-6 sm:gap-8 pb-6 sm:pb-8">
             <!-- HERO SECTION -->
             <div
                 class="container relative grid lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] gap-1 clip-gap max-xl:clip-gap-sm mx-auto">
@@ -154,12 +135,12 @@
 
                         <!-- SLOGAN -->
                         <div class="grid">
-                            <span class="font-serif xl:text-5xl text-3xl -mb-4">❝</span>
+                            <span class="font-serif xl:text-4xl text-2xl -mb-4">❝</span>
                             <p class="text-center text-balance xl:text-lg">
                                 Hãy dành cho nhau trong tình yêu. <br />
                                 Hãy tôn trọng lẫn nhau trên chính bản thân mình
                             </p>
-                            <span class="font-serif xl:text-5xl text-3xl text-right -mt-2">❞</span>
+                            <span class="font-serif xl:text-4xl text-2xl text-right -mt-2">❞</span>
                             <span class="italic text-right text-gray-500 max-xl:text-sm"> - Roma 12:10 </span>
                         </div>
                     </div>
@@ -187,10 +168,11 @@
 
                     <a href="https://maps.app.goo.gl/NRZVGnyPpbdu38Zp9" target="_blank"
                         class="relative flex flex-col justify-center max-lg:items-center gap-2 bg-white rounded-3xl max-xl:rounded-t-md max-lg:rounded-bl-3xl max-xl:rounded-bl-md xl:max-w-[20dvw] z-[1] p-6 sm:p-8">
-                        <h3 class="text-2xl max-lg:text-xl font-bold leading-tight uppercase text-pretty">TU VIỆN <span
-                                class="inline-block">GIÁO XỨ</span> MAI KHÔI</h3>
+                        <h3 class="text-2xl font-semibold leading-tight capitalize text-pretty">
+                            Tu Viện <span class="inline-block">Giáo Xứ</span> <span class="inline-block">Mai Khôi</span>
+                        </h3>
 
-                        <p class="max-xl:text-sm text-balance">44 Tú Xương, Quận 3, TP.HCM</p>
+                        <p class="max-lg:text-sm font-normal text-balance">44 Tú Xương, Quận 3, TP.HCM</p>
                     </a>
                 </section>
             </div>
@@ -221,7 +203,7 @@
                         class="group/card flex flex-col gap-4 bg-white bg-opacity-80 hover:bg-opacity-100 backdrop-blur-lg border border-white rounded-3xl p-6 sm:p-8 transition-all">
                         <div class="card-header grid">
                             <span class="text-xs uppercase text-gray-500">Thư viện Hiệp Ca</span>
-                            <h3 class="text-2xl font-semibold capitalize">Các Bài Thánh Lễ</h3>
+                            <h3 class="text-2xl font-semibold capitalize">Các Bài Thánh Ca</h3>
                         </div>
 
                         <div class="aspect-video rounded-2xl overflow-hidden">
@@ -254,39 +236,40 @@
         <footer class="bg-white -mx-6 sm:-mx-8 p-6 sm:p-8">
             <div class="container mx-auto grid grid-cols-2 gap-4">
                 <div class="grid gap-2 sm:gap-4 content-center max-sm:text-center max-sm:col-span-full pl-6 sm:pl-8">
-                    <div class="flex items-center max-sm:justify-center gap-2 font-bold leading-tight text-lg uppercase">
+                    <div
+                        class="flex items-center max-sm:justify-center gap-2 font-bold leading-tight text-lg uppercase">
                         <span class="text-[1.5em]">✝</span>
                         <span>Ca Đoàn Hiệp Ca</span>
                     </div>
                     <p class="text-balance">Nơi chia sẻ niềm vui và tình yêu của Chúa qua âm nhạc và sống đạo với lời ca
                         tiếng hát như trẻ thơ dâng Ngài</p>
                 </div>
-        
+
                 <div class="grid max-sm:col-span-full">
                     <iframe class="h-60 w-full rounded-2xl block"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.4337052283627!2d106.68071917573607!3d10.778056759162247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f25923a21c5%3A0xfa967a43aae46af5!2zTmjDoCB0aOG7nSBNYWkgS2jDtGk!5e0!3m2!1svi!2s!4v1703865610537!5m2!1svi!2s"
                         style="border: 0" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-        
+
                 <ul class="flex items-center gap-1 text-xl sm:text-2xl sm:pl-8">
                     <li>
                         <a href="#" target="_blank"
-                            class="size-10 grid place-content-center rounded-full hover:bg-indigo-100"><span><i
+                            class="size-10 grid place-content-center rounded-full hover:bg-blue-100"><span><i
                                     class="block ph-facebook-logo ph-fill"></i></span></a>
                     </li>
                     <li>
                         <a href="#" target="_blank"
-                            class="size-10 grid place-content-center rounded-full hover:bg-indigo-100"><span><i
+                            class="size-10 grid place-content-center rounded-full hover:bg-blue-100"><span><i
                                     class="block ph-instagram-logo ph-bold"></i></span></a>
                     </li>
                     <li>
                         <a href="#" target="_blank"
-                            class="size-10 grid place-content-center rounded-full hover:bg-indigo-100"><span><i
+                            class="size-10 grid place-content-center rounded-full hover:bg-blue-100"><span><i
                                     class="block ph-youtube-logo ph-fill"></i></span></a>
                     </li>
                 </ul>
-        
+
                 <div class="flex items-center justify-end gap-1 text-xs">
                     <i class="ph-copyright ph-bold"></i>
                     <span><span id="current-year"></span> Ca Đoàn Hiệp Ca</span>

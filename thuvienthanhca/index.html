@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thư Viện Thánh Ca - Ca Đoàn Hiệp Ca</title>
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+
+    <!-- Phosphor icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+        @layer base {
+                html,
+                body {
+                    @apply font-sans text-gray-800 bg-slate-100;
+                }
+                h1,
+                h2,
+                h3,
+                h4,
+                h5,
+                h6,
+                .h1,
+                .h2,
+                .h3,
+                .h4,
+                .h5,
+                .h6 {
+                    @apply font-serif;
+                }
+                a {
+                    @apply font-medium hover:text-blue-700;
+                }
+            }
+            @layer components {
+                .clip-gap-sm {
+                    --clip-gap: 1rem;
+                }
+                .clip-gap {
+                    --clip-gap: 1.5rem;
+                }
+                .clip-gap-lg {
+                    --clip-gap: 2rem;
+                }
+                .page-layout{
+                    @apply grid min-h-screen px-6 sm:px-8 max-md:mb-16;
+                    grid-template-rows: auto minmax(0,1fr) auto;
+                }
+            }
+        </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                fontFamily: {
+                    sans: ["Inter", "sans-serif"],
+                    serif: ["Playfair Display", "serif"],
+                },
+            },
+        };
+    </script>
+</head>
+
+<body>
+    <div class="page-layout">
+        <header class="relative md:sticky top-0 z-10 -mx-6 sm:-mx-8">
+            <div class="absolute inset-0 bg-slate-100 bg-opacity-90 backdrop-blur-lg z-[-1]"></div>
+            <div class="container flex items-center justify-between h-24 mx-auto py-4">
+                <!-- LOGO -->
+                <a href="../index.html"
+                    class="flex items-center gap-2 text-lg font-bold leading-tight font-serif uppercase text-blue-700 max-md:mx-auto">
+                    <span class="text-[1.75em]">
+                        <svg class="h-[1em] w-auto" width="200" height="280" viewBox="0 0 200 280" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M120 0H80V70H0V110H80V280H120V110H200V70H120V0Z" fill="currentColor" />
+                        </svg>
+                    </span>
+                    <span>Ca Đoàn<br />Hiệp Ca</span>
+                </a>
+                <div
+                    class="inline-flex gap-2 font-medium uppercase text-xs lg:text-sm xl:text-base max-md:fixed max-md:bottom-0 max-md:inset-x-0 max-md:border-t max-md:bg-white max-md:bg-opacity-90 max-md:backdrop-blur-lg max-md:h-20 *:max-md:text-center *:grid *:place-content-center *:rounded-lg *:h-12 *:border-y-2 *:border-transparent *:py-2 *:px-4 *:transition-all">
+                    <!-- active route -->
+                    <a href="../thanhlehiepca/index.html" class="hover:bg-blue-100">Giờ Thánh Lễ</a>
+
+                    <a href="../thuvienthanhca/index.html"
+                        class="hover:bg-blue-100 text-blue-700 !rounded-t-none !border-t-current">Thư Viện Thánh Ca</a>
+                    <a href="../tamtinh/index.html" class="hover:bg-blue-100">Tâm Tình</a>
+                    <a href="../lienhe/index.html" class="hover:bg-blue-100">Liên Hệ</a>
+                </div>
+            </div>
+        </header>
+
+        <main class="flex flex-col gap-6 sm:gap-8 pb-6 sm:pb-8">
+            <!-- HERO SECTION -->
+            <section
+                class="container relative grid md:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] lg:grid-cols-1 gap-1 clip-gap max-xl:clip-gap-sm mx-auto">
+                <div
+                    class="lg:absolute top-0 left-0 grid bg-slate-100 lg:rounded-br-[calc(var(--clip-gap)_+_1.5rem)] lg:pr-[var(--clip-gap)] lg:pb-[var(--clip-gap)]">
+                    <div class="max-lg:hidden absolute -right-[calc(var(--clip-gap)_*_1.25)] top-0 text-slate-100 z-0">
+                        <svg width="72" height="48" class="w-[calc(var(--clip-gap)_*_1.25_*_3)] h-auto"
+                            viewBox="0 0 72 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M72 0H0V48H48V24C48 10.7452 58.7452 0 72 0Z" fill="currentColor" />
+                        </svg>
+                    </div>
+                    <div
+                        class="max-lg:hidden absolute -bottom-[calc(var(--clip-gap)_*_1.25)] max-lg:left-0 left-[calc(var(--clip-gap)_*_4)] text-slate-100 z-0">
+                        <svg width="48" height="72" class="h-[calc(var(--clip-gap)_*_1.25_*_3)] w-auto"
+                            viewBox="0 0 48 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M3.14722e-06 72L0 0L48 -2.09815e-06L48 48L24 48C10.7452 48 2.56783e-06 58.7452 3.14722e-06 72Z"
+                                fill="currentColor" />
+                        </svg>
+                    </div>
+
+                    <div
+                        class="relative flex flex-col items-center justify-center gap-2 sm:gap-4 bg-white rounded-md max-md:rounded-t-3xl md:rounded-l-3xl lg:rounded-3xl lg:max-w-[30dvw] z-[1] px-6 sm:p-8 max-md:py-4">
+                        <!-- HEADLINE -->
+                        <h2 class="xl:text-4xl text-3xl font-bold leading-tight uppercase">Các Bài Thánh Ca</h2>
+
+                        <!-- INTRO -->
+                        <div class="grid gap-2">
+                            <p class="text-center text-balance xl:text-lg">
+                            <p class="text-center text-balance xl:text-lg">
+                                Chúng tôi sử dụng các bài nhạc thánh này phụng vụ Thánh Lễ
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid h-[min(420px,50dvmax)] px-[calc(var(--clip-gap)_*_4)] max-lg:px-0">
+                    <div class="overflow-hidden rounded-md max-md:rounded-b-3xl md:rounded-r-3xl lg:rounded-3xl">
+                        <img src="../images/thanhca.jpg" alt="" class="object-cover w-full h-full" />
+                    </div>
+                </div>
+            </section>
+
+            <!-- SONGS SECTION -->
+            <section class="container flex max-md:flex-col gap-4 md:gap-6 mx-auto">
+                <!-- CATEGORIES -->
+                <div
+                    class="order-1 md:order-2 flex flex-col gap-4 max-md:items-baseline max-md:justify-between sticky top-0 md:top-24 py-2 -mb-2 bg-slate-100 bg-opacity-90 backdrop-blur">
+                    <h2 class="text-xl font-bold md:pl-7">Chủ đề</h2>
+                    <div
+                        class="flex md:grid gap-2 md:gap-1 overflow-x-auto snap-x snap-mandatory *:snap-start *:min-w-max *:inline-flex *:items-center *:justify-start *:gap-1 *:h-8 *:rounded-md *:max-md:bg-white *:text-sm *:select-none *:px-2">
+                        <label class="has-[:checked]:max-md:!bg-blue-100 has-[:checked]:!text-blue-700">
+                            <input type="checkbox" checked hidden class="peer">
+                            <i
+                                class="text-base ph-check-fat ph-fill opacity-0 peer-checked:opacity-100 transition-all"></i>
+                            Tất cả
+                        </label>
+                        <label class="has-[:checked]:max-md:!bg-blue-100  has-[:checked]:!text-blue-700">
+                            <input type="checkbox" hidden class="peer">
+                            <i
+                                class="text-base ph-check-fat ph-fill opacity-0 peer-checked:opacity-100 transition-all"></i>
+                            Đức Mẹ
+                        </label>
+                        <label class="has-[:checked]:max-md:!bg-blue-100  has-[:checked]:!text-blue-700">
+                            <input type="checkbox" hidden class="peer">
+                            <i
+                                class="text-base ph-check-fat ph-fill opacity-0 peer-checked:opacity-100 transition-all"></i>
+                            Nhập Lễ
+                        </label>
+                        <label class="has-[:checked]:max-md:!bg-blue-100  has-[:checked]:!text-blue-700">
+                            <input type="checkbox" hidden class="peer">
+                            <i
+                                class="text-base ph-check-fat ph-fill opacity-0 peer-checked:opacity-100 transition-all"></i>
+                            Đáp Ca, Thánh Vịnh
+                        </label>
+                        <label class="has-[:checked]:max-md:!bg-blue-100  has-[:checked]:!text-blue-700">
+                            <input type="checkbox" hidden class="peer">
+                            <i
+                                class="text-base ph-check-fat ph-fill opacity-0 peer-checked:opacity-100 transition-all"></i>
+                            Halleluia
+                        </label>
+                        <label class="has-[:checked]:max-md:!bg-blue-100  has-[:checked]:!text-blue-700">
+                            <input type="checkbox" hidden class="peer">
+                            <i
+                                class="text-base ph-check-fat ph-fill opacity-0 peer-checked:opacity-100 transition-all"></i>
+                            Dâng Lễ
+                        </label>
+                        <label class="has-[:checked]:max-md:!bg-blue-100  has-[:checked]:!text-blue-700">
+                            <input type="checkbox" hidden class="peer">
+                            <i
+                                class="text-base ph-check-fat ph-fill opacity-0 peer-checked:opacity-100 transition-all"></i>
+                            Hiệp Lễ
+                        </label>
+                        <label class="has-[:checked]:max-md:!bg-blue-100  has-[:checked]:!text-blue-700">
+                            <input type="checkbox" hidden class="peer">
+                            <i
+                                class="text-base ph-check-fat ph-fill opacity-0 peer-checked:opacity-100 transition-all"></i>
+                            Kết Lễ
+                        </label>
+                        <label class="has-[:checked]:max-md:!bg-blue-100  has-[:checked]:!text-blue-700">
+                            <input type="checkbox" hidden class="peer">
+                            <i
+                                class="text-base ph-check-fat ph-fill opacity-0 peer-checked:opacity-100 transition-all"></i>
+                            Bài hát cầu cho các linh hồn
+                        </label>
+                        <label class="has-[:checked]:!bg-blue-100  has-[:checked]:!text-blue-700">
+                            <input type="checkbox" hidden class="peer">
+                            <i
+                                class="text-base ph-check-fat ph-fill opacity-0 peer-checked:opacity-100 transition-all"></i>
+                            Lễ Cưới, Lễ Giỗ
+                        </label>
+                        <label class="has-[:checked]:!bg-blue-100  has-[:checked]:!text-blue-700">
+                            <input type="checkbox" hidden class="peer">
+                            <i
+                                class="text-base ph-check-fat ph-fill opacity-0 peer-checked:opacity-100 transition-all"></i>
+                            Lễ các Thánh
+                        </label>
+                        <label class="has-[:checked]:!bg-blue-100  has-[:checked]:!text-blue-700">
+                            <input type="checkbox" hidden class="peer">
+                            <i
+                                class="text-base ph-check-fat ph-fill opacity-0 peer-checked:opacity-100 transition-all"></i>
+                            Rửa tội, Thêm sức
+                        </label>
+                        <label class="has-[:checked]:!bg-blue-100  has-[:checked]:!text-blue-700">
+                            <input type="checkbox" hidden class="peer">
+                            <i
+                                class="text-base ph-check-fat ph-fill opacity-0 peer-checked:opacity-100 transition-all"></i>
+                            Tuyển tập Hiệp Ca
+                        </label>
+                    </div>
+                </div>
+
+                <!-- LIST -->
+                <div class="order-2 md:order-1 w-full grid md:grid-cols-2 2xl:grid-cols-3 content-start gap-4 md:gap-6">
+                    <div class="grid gap-4 bg-white bg-opacity-90 backdrop-blur rounded-3xl text-left p-6 sm:p-8">
+                        <div class="grid grid-cols-[minmax(0,1fr)_auto] content-center gap-2">
+                            <div class="grid gap-2">
+                                <div class="font-bold font-serif text-xl md:text-2xl">Song name</div>
+                                <ul
+                                    class="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs capitalize text-gray-500">
+                                    <li class="hover:text-blue-700">category</li>
+                                    <li class="hover:text-blue-700">category</li>
+                                    <li class="hover:text-blue-700">category</li>
+                                    <li class="hover:text-blue-700">category</li>
+                                    <li class="hover:text-blue-700">category</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <button
+                                    class="hover:bg-blue-600 size-12 bg-blue-700 text-white rounded-full text-xl flex items-center justify-center">
+                                    <i class="ph-play ph-fill"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap items-center gap-2 pt-4 border-t">
+                            <span class="text-sm pr-2">Download</span>
+                            <div
+                                class="inline-flex gap-2 *:h-10 *:text-blue-700 *:bg-blue-100 *:rounded-full *:text-xl *:flex *:items-center *:gap-2 *:px-4">
+                                <button>
+                                    <i class="ph-file-pdf ph"></i>
+                                    <span class="text-sm min-w-max">PDF file</span>
+                                </button>
+                                <button>
+                                    <i class="ph-file-audio ph"></i>
+                                    <span class="text-sm min-w-max">Audio file</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid gap-4 bg-white bg-opacity-90 backdrop-blur rounded-3xl text-left p-6 sm:p-8">
+                        <div class="grid grid-cols-[minmax(0,1fr)_auto] content-center gap-2">
+                            <div class="grid gap-2">
+                                <div class="font-bold font-serif text-xl md:text-2xl">Song name</div>
+                                <ul
+                                    class="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs capitalize text-gray-500">
+                                    <li class="hover:text-blue-700">category</li>
+                                    <li class="hover:text-blue-700">category</li>
+                                    <li class="hover:text-blue-700">category</li>
+                                    <li class="hover:text-blue-700">category</li>
+                                    <li class="hover:text-blue-700">category</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <button
+                                    class="hover:bg-blue-600 size-12 bg-blue-700 text-white rounded-full text-xl flex items-center justify-center">
+                                    <i class="ph-play ph-fill"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap items-center gap-2 pt-4 border-t">
+                            <span class="text-sm pr-2">Download</span>
+                            <div
+                                class="inline-flex gap-2 *:h-10 *:text-blue-700 *:bg-blue-100 *:rounded-full *:text-xl *:flex *:items-center *:gap-2 *:px-4">
+                                <button>
+                                    <i class="ph-file-pdf ph"></i>
+                                    <span class="text-sm min-w-max">PDF file</span>
+                                </button>
+                                <button>
+                                    <i class="ph-file-audio ph"></i>
+                                    <span class="text-sm min-w-max">Audio file</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid gap-4 bg-white bg-opacity-90 backdrop-blur rounded-3xl text-left p-6 sm:p-8">
+                        <div class="grid grid-cols-[minmax(0,1fr)_auto] content-center gap-2">
+                            <div class="grid gap-2">
+                                <div class="font-bold font-serif text-xl md:text-2xl">Song name</div>
+                                <ul
+                                    class="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs capitalize text-gray-500">
+                                    <li class="hover:text-blue-700">category</li>
+                                    <li class="hover:text-blue-700">category</li>
+                                    <li class="hover:text-blue-700">category</li>
+                                    <li class="hover:text-blue-700">category</li>
+                                    <li class="hover:text-blue-700">category</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <button
+                                    class="hover:bg-blue-600 size-12 bg-blue-700 text-white rounded-full text-xl flex items-center justify-center">
+                                    <i class="ph-play ph-fill"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap items-center gap-2 pt-4 border-t">
+                            <span class="text-sm pr-2">Download</span>
+                            <div
+                                class="inline-flex gap-2 *:h-10 *:text-blue-700 *:bg-blue-100 *:rounded-full *:text-xl *:flex *:items-center *:gap-2 *:px-4">
+                                <button>
+                                    <i class="ph-file-pdf ph"></i>
+                                    <span class="text-sm min-w-max">PDF file</span>
+                                </button>
+                                <button>
+                                    <i class="ph-file-audio ph"></i>
+                                    <span class="text-sm min-w-max">Audio file</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid gap-4 bg-white bg-opacity-90 backdrop-blur rounded-3xl text-left p-6 sm:p-8">
+                        <div class="grid grid-cols-[minmax(0,1fr)_auto] content-center gap-2">
+                            <div class="grid gap-2">
+                                <div class="font-bold font-serif text-xl md:text-2xl">Song name</div>
+                                <ul
+                                    class="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs capitalize text-gray-500">
+                                    <li class="hover:text-blue-700">category</li>
+                                    <li class="hover:text-blue-700">category</li>
+                                    <li class="hover:text-blue-700">category</li>
+                                    <li class="hover:text-blue-700">category</li>
+                                    <li class="hover:text-blue-700">category</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <button
+                                    class="hover:bg-blue-600 size-12 bg-blue-700 text-white rounded-full text-xl flex items-center justify-center">
+                                    <i class="ph-play ph-fill"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap items-center gap-2 pt-4 border-t">
+                            <span class="text-sm pr-2">Download</span>
+                            <div
+                                class="inline-flex gap-2 *:h-10 *:text-blue-700 *:bg-blue-100 *:rounded-full *:text-xl *:flex *:items-center *:gap-2 *:px-4">
+                                <button>
+                                    <i class="ph-file-pdf ph"></i>
+                                    <span class="text-sm min-w-max">PDF file</span>
+                                </button>
+                                <button>
+                                    <i class="ph-file-audio ph"></i>
+                                    <span class="text-sm min-w-max">Audio file</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid gap-4 bg-white bg-opacity-90 backdrop-blur rounded-3xl text-left p-6 sm:p-8">
+                        <div class="grid grid-cols-[minmax(0,1fr)_auto] content-center gap-2">
+                            <div class="grid gap-2">
+                                <div class="font-bold font-serif text-xl md:text-2xl">Song name</div>
+                                <ul
+                                    class="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs capitalize text-gray-500">
+                                    <li class="hover:text-blue-700">category</li>
+                                    <li class="hover:text-blue-700">category</li>
+                                    <li class="hover:text-blue-700">category</li>
+                                    <li class="hover:text-blue-700">category</li>
+                                    <li class="hover:text-blue-700">category</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <button
+                                    class="hover:bg-blue-600 size-12 bg-blue-700 text-white rounded-full text-xl flex items-center justify-center">
+                                    <i class="ph-play ph-fill"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap items-center gap-2 pt-4 border-t">
+                            <span class="text-sm pr-2">Download</span>
+                            <div
+                                class="inline-flex gap-2 *:h-10 *:text-blue-700 *:bg-blue-100 *:rounded-full *:text-xl *:flex *:items-center *:gap-2 *:px-4">
+                                <button>
+                                    <i class="ph-file-pdf ph"></i>
+                                    <span class="text-sm min-w-max">PDF file</span>
+                                </button>
+                                <button>
+                                    <i class="ph-file-audio ph"></i>
+                                    <span class="text-sm min-w-max">Audio file</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid gap-4 bg-white bg-opacity-90 backdrop-blur rounded-3xl text-left p-6 sm:p-8">
+                        <div class="grid grid-cols-[minmax(0,1fr)_auto] content-center gap-2">
+                            <div class="grid gap-2">
+                                <div class="font-bold font-serif text-xl md:text-2xl">Song name</div>
+                                <ul
+                                    class="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs capitalize text-gray-500">
+                                    <li class="hover:text-blue-700">category</li>
+                                    <li class="hover:text-blue-700">category</li>
+                                    <li class="hover:text-blue-700">category</li>
+                                    <li class="hover:text-blue-700">category</li>
+                                    <li class="hover:text-blue-700">category</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <button
+                                    class="hover:bg-blue-600 size-12 bg-blue-700 text-white rounded-full text-xl flex items-center justify-center">
+                                    <i class="ph-play ph-fill"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap items-center gap-2 pt-4 border-t">
+                            <span class="text-sm pr-2">Download</span>
+                            <div
+                                class="inline-flex gap-2 *:h-10 *:text-blue-700 *:bg-blue-100 *:rounded-full *:text-xl *:flex *:items-center *:gap-2 *:px-4">
+                                <button>
+                                    <i class="ph-file-pdf ph"></i>
+                                    <span class="text-sm min-w-max">PDF file</span>
+                                </button>
+                                <button>
+                                    <i class="ph-file-audio ph"></i>
+                                    <span class="text-sm min-w-max">Audio file</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid gap-4 bg-white bg-opacity-90 backdrop-blur rounded-3xl text-left p-6 sm:p-8">
+                        <div class="grid grid-cols-[minmax(0,1fr)_auto] content-center gap-2">
+                            <div class="grid gap-2">
+                                <div class="font-bold font-serif text-xl md:text-2xl">Song name</div>
+                                <ul
+                                    class="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs capitalize text-gray-500">
+                                    <li class="hover:text-blue-700">category</li>
+                                    <li class="hover:text-blue-700">category</li>
+                                    <li class="hover:text-blue-700">category</li>
+                                    <li class="hover:text-blue-700">category</li>
+                                    <li class="hover:text-blue-700">category</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <button
+                                    class="hover:bg-blue-600 size-12 bg-blue-700 text-white rounded-full text-xl flex items-center justify-center">
+                                    <i class="ph-play ph-fill"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap items-center gap-2 pt-4 border-t">
+                            <span class="text-sm pr-2">Download</span>
+                            <div
+                                class="inline-flex gap-2 *:h-10 *:text-blue-700 *:bg-blue-100 *:rounded-full *:text-xl *:flex *:items-center *:gap-2 *:px-4">
+                                <button>
+                                    <i class="ph-file-pdf ph"></i>
+                                    <span class="text-sm min-w-max">PDF file</span>
+                                </button>
+                                <button>
+                                    <i class="ph-file-audio ph"></i>
+                                    <span class="text-sm min-w-max">Audio file</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid gap-4 bg-white bg-opacity-90 backdrop-blur rounded-3xl text-left p-6 sm:p-8">
+                        <div class="grid grid-cols-[minmax(0,1fr)_auto] content-center gap-2">
+                            <div class="grid gap-2">
+                                <div class="font-bold font-serif text-xl md:text-2xl">Song name</div>
+                                <ul
+                                    class="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs capitalize text-gray-500">
+                                    <li class="hover:text-blue-700">category</li>
+                                    <li class="hover:text-blue-700">category</li>
+                                    <li class="hover:text-blue-700">category</li>
+                                    <li class="hover:text-blue-700">category</li>
+                                    <li class="hover:text-blue-700">category</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <button
+                                    class="hover:bg-blue-600 size-12 bg-blue-700 text-white rounded-full text-xl flex items-center justify-center">
+                                    <i class="ph-play ph-fill"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap items-center gap-2 pt-4 border-t">
+                            <span class="text-sm pr-2">Download</span>
+                            <div
+                                class="inline-flex gap-2 *:h-10 *:text-blue-700 *:bg-blue-100 *:rounded-full *:text-xl *:flex *:items-center *:gap-2 *:px-4">
+                                <button>
+                                    <i class="ph-file-pdf ph"></i>
+                                    <span class="text-sm min-w-max">PDF file</span>
+                                </button>
+                                <button>
+                                    <i class="ph-file-audio ph"></i>
+                                    <span class="text-sm min-w-max">Audio file</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-span-full flex justify-center">
+                        <button
+                            class="hover:text-blue-700 font-medium rounded-full bg-white inline-flex items-center px-4 py-2">Xem
+                            thêm...</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="bg-white -mx-6 sm:-mx-8 p-6 sm:p-8">
+            <div class="container mx-auto grid grid-cols-2 gap-4">
+                <div class="grid gap-2 sm:gap-4 content-center max-sm:text-center max-sm:col-span-full pl-6 sm:pl-8">
+                    <div
+                        class="flex items-center max-sm:justify-center gap-2 font-bold leading-tight text-lg uppercase">
+                        <span class="text-[1.25em]">
+                            <svg class="h-[1em] w-auto" width="200" height="280" viewBox="0 0 200 280" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M120 0H80V70H0V110H80V280H120V110H200V70H120V0Z" fill="currentColor" />
+                            </svg>
+                        </span>
+                        <span>Ca Đoàn Hiệp Ca</span>
+                    </div>
+                    <p class="text-balance">Nơi chia sẻ niềm vui và tình yêu của Chúa qua âm nhạc và sống đạo với lời ca
+                        tiếng hát như trẻ thơ dâng Ngài</p>
+                </div>
+
+                <div class="grid max-sm:col-span-full">
+                    <iframe class="h-60 w-full rounded-2xl block"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.4337052283627!2d106.68071917573607!3d10.778056759162247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f25923a21c5%3A0xfa967a43aae46af5!2zTmjDoCB0aOG7nSBNYWkgS2jDtGk!5e0!3m2!1svi!2s!4v1703865610537!5m2!1svi!2s"
+                        style="border: 0" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+                <ul class="flex items-center gap-1 text-xl sm:text-2xl sm:pl-8">
+                    <li>
+                        <a href="#" target="_blank"
+                            class="size-10 grid place-content-center rounded-full hover:bg-blue-100"><span><i
+                                    class="block ph-facebook-logo ph-fill"></i></span></a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank"
+                            class="size-10 grid place-content-center rounded-full hover:bg-blue-100"><span><i
+                                    class="block ph-instagram-logo ph-bold"></i></span></a>
+                    </li>
+                    <li>
+                        <a href="#" target="_blank"
+                            class="size-10 grid place-content-center rounded-full hover:bg-blue-100"><span><i
+                                    class="block ph-youtube-logo ph-fill"></i></span></a>
+                    </li>
+                </ul>
+
+                <div class="flex items-center justify-end gap-1 text-xs">
+                    <i class="ph-copyright ph-bold"></i>
+                    <span><span id="current-year"></span> Ca Đoàn Hiệp Ca</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById("current-year").innerHTML = new Date().getFullYear();
+    </script>
+</body>
+
+</html>

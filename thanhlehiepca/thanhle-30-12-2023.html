@@ -39,7 +39,7 @@
                     @apply font-serif;
                 }
                 a {
-                    @apply font-medium hover:text-indigo-800;
+                    @apply font-medium hover:text-blue-700;
                 }
             }
             @layer components {
@@ -53,7 +53,7 @@
                     --clip-gap: 2rem;
                 }
                 .page-layout{
-                    @apply grid min-h-screen px-6 sm:px-8;
+                    @apply grid min-h-screen px-6 sm:px-8 max-md:mb-16;
                     grid-template-rows: auto minmax(0,1fr) auto;
                 }
             }
@@ -72,55 +72,35 @@
 
 <body>
     <div class="page-layout">
-        <header class="bg-slate-100 bg-opacity-90 backdrop-blur-lg sticky top-0 z-10">
+        <header class="relative md:sticky top-0 z-10 -mx-6 sm:-mx-8">
+            <div class="absolute inset-0 bg-slate-100 bg-opacity-90 backdrop-blur-lg z-[-1]"></div>
             <div class="container flex items-center justify-between h-24 mx-auto py-4">
                 <!-- LOGO -->
-                <h1
-                    class="flex items-center gap-2 text-lg font-bold leading-tight font-serif uppercase text-indigo-800">
-                    <span class="text-[2.5em]">✝</span>
+                <a href="../index.html"
+                    class="flex items-center gap-2 text-lg font-bold leading-tight font-serif uppercase text-blue-700 max-md:mx-auto">
+                    <span class="text-[1.75em]">
+                        <svg class="h-[1em] w-auto" width="200" height="280" viewBox="0 0 200 280" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M120 0H80V70H0V110H80V280H120V110H200V70H120V0Z"
+                                fill="currentColor" />
+                        </svg>
+                    </span>
                     <span>Ca Đoàn<br />Hiệp Ca</span>
-                </h1>
-                <ul class="inline-flex gap-2 font-medium uppercase max-lg:hidden">
-                    <li><a class="w-full grid place-content-center hover:bg-indigo-100 rounded-lg h-10 px-4"
-                            href="../index.html">Trang Chủ</a></li>
-                    <li><a class="w-full grid place-content-center hover:bg-indigo-100 rounded-lg h-10 px-4"
-                            href="../thanhlehiepca/index.html">Giờ Thánh Lễ</a></li>
-                    <li><a class="w-full grid place-content-center hover:bg-indigo-100 rounded-lg h-10 px-4"
-                            href="../thuvienthanhca/index.html">Thư Viện Thánh Ca</a></li>
-                    <li><a class="w-full grid place-content-center hover:bg-indigo-100 rounded-lg h-10 px-4"
-                            href="../tamtinh/index.html">Tâm Tình</a></li>
-                    <li><a class="w-full grid place-content-center hover:bg-indigo-100 rounded-lg h-10 px-4"
-                            href="../lienhe/index.html">Liên Hệ</a></li>
-                </ul>
-
-                <div class="lg:hidden isolate z-20">
-                    <label for="menu"
-                        class="cursor-pointer size-12 rounded-full grid place-content-center has-[:checked]:bg-white transition-all">
-                        <input role="button" type="checkbox" id="menu" class="peer" title="Menu" placeholder="Menu"
-                            hidden />
-                        <i class="ph-list ph-bold peer-checked:hidden text-2xl"></i>
-                        <i class="ph-x ph-bold hidden peer-checked:inline-block text-2xl"></i>
-                        <div
-                            class="absolute top-full -inset-x-4 h-[calc(100dvh_-_8rem)] bg-white shadow-2xl rounded-3xl p-8 z-20 opacity-0 pointer-events-none scale-0 origin-top peer-checked:pointer-events-auto peer-checked:scale-100 peer-checked:opacity-100 transition-all">
-                            <div class="grid gap-2 font-medium uppercase">
-                                <div><a class="w-full grid content-center text-right hover:bg-indigo-100 rounded-lg h-12 px-4"
-                                        href="../index.html">Trang Chủ</a></div>
-                                <div><a class="w-full grid content-center text-right hover:bg-indigo-100 rounded-lg h-12 px-4"
-                                        href="../thanhlehiepca/index.html">Giờ Thánh Lễ</a></div>
-                                <div><a class="w-full grid content-center text-right hover:bg-indigo-100 rounded-lg h-12 px-4"
-                                        href="../thuvienthanhca/index.html">Thư Viện Thánh Ca</a></div>
-                                <div><a class="w-full grid content-center text-right hover:bg-indigo-100 rounded-lg h-12 px-4"
-                                        href="../tamtinh/index.html">Tâm Tình</a></div>
-                                <div><a class="w-full grid content-center text-right hover:bg-indigo-100 rounded-lg h-12 px-4"
-                                        href="../lienhe/index.html">Liên Hệ</a></div>
-                            </div>
-                        </div>
-                    </label>
+                </a>
+                <div
+                    class="inline-flex gap-2 font-medium uppercase text-xs lg:text-sm xl:text-base max-md:fixed max-md:bottom-0 max-md:inset-x-0 max-md:border-t max-md:bg-white max-md:bg-opacity-90 max-md:backdrop-blur-lg max-md:h-20 *:max-md:text-center *:grid *:place-content-center *:rounded-lg *:h-12 *:border-y-2 *:border-transparent *:py-2 *:px-4 *:transition-all">
+                    <!-- active route -->
+                    <a href="../thanhlehiepca/index.html"
+                        class="text-blue-700 hover:bg-blue-100 !rounded-t-none !border-t-current">Giờ Thánh Lễ</a>
+        
+                    <a href="../thuvienthanhca/index.html" class="hover:bg-blue-100">Thư Viện Thánh Ca</a>
+                    <a href="../tamtinh/index.html" class="hover:bg-blue-100">Tâm Tình</a>
+                    <a href="../lienhe/index.html" class="hover:bg-blue-100">Liên Hệ</a>
                 </div>
             </div>
         </header>
 
-        <main class="flex flex-col gap-6 sm:gap-8 py-6 sm:py-8">
+        <main class="flex flex-col gap-6 sm:gap-8 pb-6 sm:pb-8">
             <!-- HERO SECTION -->
             <section
                 class="container relative grid md:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] lg:grid-cols-1 gap-1 clip-gap max-xl:clip-gap-sm mx-auto">
@@ -169,12 +149,12 @@
                 <div class="*:flex *:items-center *:p-4">
                     <span>1</span>
                     <span class="uppercase font-semibold">Nhập lễ</span>
-                    <span class="text-indigo-800 capitalize max-sm:col-span-full">Noi gương thánh gia</span>
+                    <span class="text-blue-700 capitalize max-sm:col-span-full">Noi gương thánh gia</span>
                     <div class="flex max-sm:col-span-full max-sm:-mt-4">
-                        <button class="rounded-full size-12 hover:bg-indigo-100 text-indigo-800 text-2xl">
+                        <button class="rounded-full size-12 hover:bg-blue-100 text-blue-700 text-2xl">
                             <i class="ph-file-pdf ph"></i>
                         </button>
-                        <button class="rounded-full size-12 hover:bg-indigo-100 text-indigo-800 text-2xl">
+                        <button class="rounded-full size-12 hover:bg-blue-100 text-blue-700 text-2xl">
                             <i class="ph-file-audio ph"></i>
                         </button>
                     </div>
@@ -182,12 +162,12 @@
                 <div class="*:flex *:items-center *:p-4">
                     <span>2</span>
                     <span class="uppercase font-semibold">Đáp ca</span>
-                    <span class="text-indigo-800 capitalize max-sm:col-span-full">Thánh Vịnh 104</span>
+                    <span class="text-blue-700 capitalize max-sm:col-span-full">Thánh Vịnh 104</span>
                     <div class="flex max-sm:col-span-full max-sm:-mt-4">
-                        <button class="rounded-full size-12 hover:bg-indigo-100 text-indigo-800 text-2xl">
+                        <button class="rounded-full size-12 hover:bg-blue-100 text-blue-700 text-2xl">
                             <i class="ph-file-pdf ph"></i>
                         </button>
-                        <button class="rounded-full size-12 hover:bg-indigo-100 text-indigo-800 text-2xl">
+                        <button class="rounded-full size-12 hover:bg-blue-100 text-blue-700 text-2xl">
                             <i class="ph-file-audio ph"></i>
                         </button>
                     </div>
@@ -195,12 +175,12 @@
                 <div class="*:flex *:items-center *:p-4">
                     <span>3</span>
                     <span class="uppercase font-semibold">HALLELUIA</span>
-                    <span class="text-indigo-800 capitalize max-sm:col-span-full">Lễ thánh gia thất</span>
+                    <span class="text-blue-700 capitalize max-sm:col-span-full">Lễ thánh gia thất</span>
                     <div class="flex max-sm:col-span-full max-sm:-mt-4">
-                        <button class="rounded-full size-12 hover:bg-indigo-100 text-indigo-800 text-2xl">
+                        <button class="rounded-full size-12 hover:bg-blue-100 text-blue-700 text-2xl">
                             <i class="ph-file-pdf ph"></i>
                         </button>
-                        <button class="rounded-full size-12 hover:bg-indigo-100 text-indigo-800 text-2xl">
+                        <button class="rounded-full size-12 hover:bg-blue-100 text-blue-700 text-2xl">
                             <i class="ph-file-audio ph"></i>
                         </button>
                     </div>
@@ -208,12 +188,12 @@
                 <div class="*:flex *:items-center *:p-4">
                     <span>4</span>
                     <span class="uppercase font-semibold">Dâng lễ</span>
-                    <span class="text-indigo-800 capitalize max-sm:col-span-full">Lễ thánh gia thất</span>
+                    <span class="text-blue-700 capitalize max-sm:col-span-full">Lễ thánh gia thất</span>
                     <div class="flex max-sm:col-span-full max-sm:-mt-4">
-                        <button class="rounded-full size-12 hover:bg-indigo-100 text-indigo-800 text-2xl">
+                        <button class="rounded-full size-12 hover:bg-blue-100 text-blue-700 text-2xl">
                             <i class="ph-file-pdf ph"></i>
                         </button>
-                        <button class="rounded-full size-12 hover:bg-indigo-100 text-indigo-800 text-2xl">
+                        <button class="rounded-full size-12 hover:bg-blue-100 text-blue-700 text-2xl">
                             <i class="ph-file-audio ph"></i>
                         </button>
                     </div>
@@ -221,12 +201,12 @@
                 <div class="*:flex *:items-center *:p-4">
                     <span>5</span>
                     <span class="uppercase font-semibold">Hiệp lễ</span>
-                    <span class="text-indigo-800 capitalize max-sm:col-span-full">Ca mừng thánh gia</span>
+                    <span class="text-blue-700 capitalize max-sm:col-span-full">Ca mừng thánh gia</span>
                     <div class="flex max-sm:col-span-full max-sm:-mt-4">
-                        <button class="rounded-full size-12 hover:bg-indigo-100 text-indigo-800 text-2xl">
+                        <button class="rounded-full size-12 hover:bg-blue-100 text-blue-700 text-2xl">
                             <i class="ph-file-pdf ph"></i>
                         </button>
-                        <button class="rounded-full size-12 hover:bg-indigo-100 text-indigo-800 text-2xl">
+                        <button class="rounded-full size-12 hover:bg-blue-100 text-blue-700 text-2xl">
                             <i class="ph-file-audio ph"></i>
                         </button>
                     </div>
@@ -234,12 +214,12 @@
                 <div class="*:flex *:items-center *:p-4">
                     <span>6</span>
                     <span class="uppercase font-semibold">Kết lễ</span>
-                    <span class="text-indigo-800 capitalize max-sm:col-span-full">Cầu xin thánh gia</span>
+                    <span class="text-blue-700 capitalize max-sm:col-span-full">Cầu xin thánh gia</span>
                     <div class="flex max-sm:col-span-full max-sm:-mt-4">
-                        <button class="rounded-full size-12 hover:bg-indigo-100 text-indigo-800 text-2xl">
+                        <button class="rounded-full size-12 hover:bg-blue-100 text-blue-700 text-2xl">
                             <i class="ph-file-pdf ph"></i>
                         </button>
-                        <button class="rounded-full size-12 hover:bg-indigo-100 text-indigo-800 text-2xl">
+                        <button class="rounded-full size-12 hover:bg-blue-100 text-blue-700 text-2xl">
                             <i class="ph-file-audio ph"></i>
                         </button>
                     </div>
@@ -269,17 +249,17 @@
                 <ul class="flex items-center gap-1 text-xl sm:text-2xl sm:pl-8">
                     <li>
                         <a href="#" target="_blank"
-                            class="size-10 grid place-content-center rounded-full hover:bg-indigo-100"><span><i
+                            class="size-10 grid place-content-center rounded-full hover:bg-blue-100"><span><i
                                     class="block ph-facebook-logo ph-fill"></i></span></a>
                     </li>
                     <li>
                         <a href="#" target="_blank"
-                            class="size-10 grid place-content-center rounded-full hover:bg-indigo-100"><span><i
+                            class="size-10 grid place-content-center rounded-full hover:bg-blue-100"><span><i
                                     class="block ph-instagram-logo ph-bold"></i></span></a>
                     </li>
                     <li>
                         <a href="#" target="_blank"
-                            class="size-10 grid place-content-center rounded-full hover:bg-indigo-100"><span><i
+                            class="size-10 grid place-content-center rounded-full hover:bg-blue-100"><span><i
                                     class="block ph-youtube-logo ph-fill"></i></span></a>
                     </li>
                 </ul>
